@@ -46,7 +46,7 @@ module.exports = {
     
     },
     
-    orderByMax: function(arrayJsons, limit=50, desc=true) {
+    orderWords: function(arrayJsons, limit=50, desc=true) {
         
         return (desc)?
         arrayJsons.sort((a, b) => parseFloat(JSON.stringify(b).split(':')[1]) - parseFloat(JSON.stringify(a).split(':')[1])).splice(0, limit):
