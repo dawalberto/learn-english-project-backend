@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.get('/push', (req, res) => {
     res.json({
         ok: true,
-        msg: 'Bienvenido a psuh 2'
+        msg: 'Bienvenido a psuh 22'
     })
 })
 
