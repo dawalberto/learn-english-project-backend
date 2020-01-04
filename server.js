@@ -13,6 +13,13 @@ app.get('/', (req, res) => {
 
 })
 
+app.get('/push', (req, res) => {
+    res.json({
+        ok: true,
+        msg: 'Bienvenido a psuh'
+    })
+})
+
 app.listen(3000, () => {
     console.log('Escuchando por el puerto 3000')
 })
