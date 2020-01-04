@@ -1,0 +1,4 @@
+
+function textToArray(text){
+
+}
