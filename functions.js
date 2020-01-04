@@ -46,9 +46,11 @@ module.exports = {
     
     },
     
-    orderByMax: function(arrayJsons) {
+    orderByMax: function(arrayJsons, limit=50, desc=true) {
         
-        return arrayJsons.sort((a, b) => parseFloat(JSON.stringify(b).split(':')[1]) - parseFloat(JSON.stringify(a).split(':')[1]))
+        return (desc)?
+        arrayJsons.sort((a, b) => parseFloat(JSON.stringify(b).split(':')[1]) - parseFloat(JSON.stringify(a).split(':')[1])).splice(0, limit):
+        arrayJsons.sort((a, b) => parseFloat(JSON.stringify(a).split(':')[1]) - parseFloat(JSON.stringify(b).split(':')[1])).splice(0, limit)
 
     },
 
