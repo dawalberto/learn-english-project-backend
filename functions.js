@@ -12,7 +12,7 @@ module.exports = {
             'eir','Eir','hus','peh\'s','per','thons','jeir','vis','xyr',
             'zes','hir','zer','zher','theirs','his','hers','eirs','Eirs',
             'hus','peh\'s','pers','thons','jeirs','vis','xyrs','zes','hirs',
-            'zers','zhers'
+            'zers','zhers', 'i'
         ]
         const determiners = [
             'the', 'a', 'an', 'this', 'that', 'these', 'those', 
