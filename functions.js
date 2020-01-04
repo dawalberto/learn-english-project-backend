@@ -1,6 +1,24 @@
 
 function textToArray(text){
 
+    let sanityzedText = deleteDeterminers(deletePronouns(text))
+    let result = []
+  
+    array_words = sanityzedText.split(' ');
+    array_words.sort()
+
+    array_words.forEach((word) => {
+        if(!result.find(element => (element[word])?element[word]++:false)){
+            (word) ? result.push(JSON.parse('{"'+word+'":1}')) : false
+        }
+    })
+
+    return result
+
+}
+
+function orderByMax(arrayJsons){
+    return arrayJsons.sort((a, b) => parseFloat(JSON.stringify(b).split(':')[1]) - parseFloat(JSON.stringify(a).split(':')[1]))
 }
 
 function deletePronouns(text) {
@@ -50,3 +68,4 @@ function deleteDeterminers(text) {
     return newText.join(' ')
 
 }
+
